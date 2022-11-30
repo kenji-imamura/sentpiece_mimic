@@ -1,12 +1,12 @@
 # Re-implementation of SentencePiece in Python and Additional Training of Inuktitut Subwords
 
-Thiss program is re-implementation of the core of
+This program is re-implementation of the core of
 [SentencePiece](https://github.com/google/sentencepiece) in python.
 It must be helpful to learn the behavior of SentencePiece and/or to
 study new subword tokenization.
 
 This program was used in the paper
-[(Imamura and Sumita, 2022)](to appear),
+[(Imamura and Sumita, 2022)](https://arxiv.org/abs/2211.15965),
 which additionally learned Inuktitut subwords without changing existing models.
 
 ***
@@ -61,9 +61,9 @@ The above script is the same as the following SentencePiece command.
 ```
 
 ***
-## Adding Subwords to a SentencePiece Model for Multilingual Pretrained Models (Imamura and Sumita, 2022)
+## Extending the Subwording Model of Multilingual Pretrained Models for New Languages [(Imamura and Sumita, 2022)](https://arxiv.org/abs/2211.15965)
 
-In [this paper](to appear),
+In this paper,
 we learned Inuktitut subwords in addition to the original SentencePiece model attached to the pretrained [mBART-50](https://arxiv.org/abs/2008.00401) model.  Inuktitut was not included in the original models.  Note that we did not use Huggingface's implementation in our paper even if we used mBART-50.
 
 ### Preprocessing
@@ -113,20 +113,17 @@ In this phase, we use `spm_add_train.iu.py`, in which `spm_train.py` was customi
 
 ## Citation
 ```bibtex
-@misc{imamura-sumita-2022-sentpiece,
-  title = "Extending the Subwording Model of Multilingual Pretrained Models for New Languages",
-  author = "Imamura, Kenji and Sumita, Eiichiro",
-  booktitle = "arXiv",
-  month = Dec,
-  year = "2022",
+@misc{https://doi.org/10.48550/arxiv.2211.15965,
+  doi = {10.48550/ARXIV.2211.15965},
+  url = {https://arxiv.org/abs/2211.15965},
+  author = {Imamura, Kenji and Sumita, Eiichiro},
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Extending the Subwording Model of Multilingual Pretrained Models for New Languages},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
 
 ## Acknowledgement
-Part of this work was conducted under the commissioned
-research program ‘Research and Development
-of Advanced Multilingual Translation
-Technology’ in the ‘R&D Project for Information
-and Communications Technology (JPMI00316)’
-of the Ministry of Internal Affairs and Communications
-(MIC), Japan.
+Part of this work was conducted under the commissioned research program ‘Research and Development of Advanced Multilingual Translation Technology’ in the ‘R&D Project for Information and Communications Technology (JPMI00316)’ of the Ministry of Internal Affairs and Communications (MIC), Japan.
